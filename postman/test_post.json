@@ -1,0 +1,18 @@
+{
+    "inventoryId": 12345677,
+    "sellerId": 3,
+    "eventId": 164,
+    "row": 45,
+    "section": 12,
+    "price": 56,
+    "quantity": 6
+}
+{
+    "inventoryId": 5678,
+    "sellerId": 1,
+    "eventId": 107,
+    "row": 5,
+    "section": 1,
+    "price": 100,
+    "quantity": 1
+}
