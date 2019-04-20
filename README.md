@@ -1,19 +1,19 @@
-# Data Engineering Exercise
+# SQLite Flask API
 This repo establishes a relational data model, populates a SQLite database from a sample CSV file and fake data, and builds a REST API using Flask to communicate to the database.
 
 ## Setup
 ### Clone the project repo
-`git clone git@github.com:jessdaubner/data-engineering-exercise.git`
+`git clone git@github.com:jessdaubner/sqlite-flask-api.git`
 
 ### Docker
-Download and install [Docker](https://www.docker.com/get-started). Build the app locally `docker build -t data-engineering-exercise .`.
+Download and install [Docker](https://www.docker.com/get-started). Build the app locally `docker build -t sqlite-flask-api .`.
 
 ### Postman
 Download and install [Postman](https://www.getpostman.com/apps) which will be used to send API requests to the service for testing.
 
 ## Running the App
 Run the app, mapping your machine's port 5000 to the container's published port 80.
-`docker run -p 5000:80 data-engineering-exercise`
+`docker run -p 5000:80 sqlite-flask-api`
 
 It will take a few seconds for the database to populate and the API service to start. The app will run on `http://localhost:5000`.
 
@@ -38,7 +38,7 @@ With the method set to GET (the default option), enter the request URL of the ro
 3. Change the method to POST in the drop-down menu, fill-in the request URL (e.g, `http://localhost:5000/inventory`) and hit "Send".
 
 ### Testing PUT
-1. In the "Headers" tab add a new key-value pair of `Content-Type` and `application/json` in order to set the content-type header to JSON.
+1. In the "Headers" tab, add a new key-value pair of `Content-Type` and `application/json` in order to set the content-type header to JSON.
 2. In the "Body" tab, select the "raw" radio button and add an entry in the format of `{"inventoryId": 56}`.
 3. Change the method to PUT in the drop-down menu and enter a valid request URL (e.g, `http://localhost:5000/inventory/sold/56`) corresponding to the `inventoryId` value in the request body.
 4. Hit "Send" and view the 204 response. You can also send a GET request before and after the PUT request for the same `inventoryId` to see the status change from "AVAILABLE" to "SOLD".
